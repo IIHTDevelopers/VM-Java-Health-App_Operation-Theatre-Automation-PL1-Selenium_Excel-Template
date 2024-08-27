@@ -77,7 +77,7 @@ public class operationTheatre_testcase extends AppTestBase
 
 		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringValue");
+		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringVal");
 
 		Assert.assertEquals(operationTheatre_PagesInstance.verifyBookingOTScheduleFormByClickingOnNewOTBookingButton(),expectedData.get("bookingOTSchedulePageName")) ;
 		Assert.assertTrue(locatorsFactoryInstance.verifyAddNewOTButtonIsPresent(driver).isDisplayed(), "Add New OT" + "Button is not present in the current page, Please check manually");
@@ -98,7 +98,7 @@ public class operationTheatre_testcase extends AppTestBase
 
 		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringValue");
+		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringVal");
 
 		Assert.assertEquals(operationTheatre_PagesInstance.verifyTexboxIsPresentAndValidateEnteredValue(expectedData),expectedData.get("patientName")) ;
 		Assert.assertEquals(locatorsFactoryInstance.verifyValueIsPresentInTypeOfSurgeryTextbox(),expectedData.get("surgeryTypeValue")) ;
@@ -112,7 +112,7 @@ public class operationTheatre_testcase extends AppTestBase
 
 		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringValue");
+		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringVal");
 
 		Assert.assertEquals(operationTheatre_PagesInstance.verifyPlaceholderNameOfTexboxIfTextboxIsEnabled(),expectedData.get("remarksPlaceHolderName")) ;
 		Assert.assertTrue(locatorsFactoryInstance.verifyAddNewOTButtonIsPresent(driver).isDisplayed(), "Add New OT" + "Button is not present in the current page, Please check manually");
@@ -124,7 +124,7 @@ public class operationTheatre_testcase extends AppTestBase
 
 		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringValue");
+		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModuleStringVal");
 
 		Assert.assertEquals(operationTheatre_PagesInstance.verifyButtonIsPresentAfterSendValueToSurgenNameTextfield(expectedData),expectedData.get("surgenNameValue2")) ;
 		Assert.assertTrue(locatorsFactoryInstance.verifySurgenNameFirstButtonElementIsPresent(driver).isDisplayed(), "Surgen Name First Button is not present in the current page, Please check manually");
