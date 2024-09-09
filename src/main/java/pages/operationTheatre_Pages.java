@@ -210,8 +210,8 @@ public class operationTheatre_Pages extends StartupPage {
 	
 	/**@Test14.2
 	 * about this method verifyOptionIsSelectedFromDropdown() 
-	 * @param : get the data from json file as type Map<String, String> expectedData
-	 * @description : it will select the option as per JSON expected data
+	 * @param : get the data from Excel file as type Map<String, String> expectedData
+	 * @description : it will select the option as per Excel expected data
 	 * @return : String
 	 * @author : YAKSHA
 	 */
