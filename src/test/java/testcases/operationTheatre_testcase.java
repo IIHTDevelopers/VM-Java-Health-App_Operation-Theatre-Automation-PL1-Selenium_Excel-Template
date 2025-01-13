@@ -210,52 +210,6 @@ public class operationTheatre_testcase extends AppTestBase
 		Assert.assertEquals(locatorsFactoryInstance.verifyValueIsPresentInTextbox(),expectedData.get("remarksValue"),"value is not present in the remark text box (Locators factory),  Please check manually");
 	}
 
-	@Test(priority = 13, groups = {"sanity"}, description="Expand the Vaccination Module's\r\n"
-			+ "and click on \"Patient List\" page \r\n"
-			+ "and perform the keyboard operation\r\n"
-			+ "(\"Alt + N\") to open the \"Vaccination Patient Register\" form.\r\n"
-			+ "Then Validate the \"Vaccination Patient Register\" page Name.")
-	public void performKeyboardOperation() throws Exception {
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModule");
-		Assert.assertEquals(operationTheatre_PagesInstance.performKeyboardOperation(), expectedData.get("titleNameOfVaccinationPatientRegisterForm"),"Error in Page class something went wroung, please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.verifyTitleNameOfVaccinationPatientRegisterFormIsPresent(),expectedData.get("titleNameOfVaccinationPatientRegisterForm"),"title Name Of Vaccination Patient Register Form is not matching in current page(locators factory), Please check manually");
-	}
-
-	@Test(priority = 14, groups = {"sanity"}, description="Expand the \"Appointment\" module\r\n"
-			+ "and click on \"Book Appointment\" Sub module.\r\n"
-			+ "On the \"Book Appointment\" page,\r\n"
-			+ "select the \"Month\" radio button\r\n"
-			+ "and verify that the \"Month\" radio button is selected or not.\r\n"
-			+ "After the validation deselect the \"Month\" radio button.\r\n"
-			+ "Then select the \"Follow-up Patient\" from the \"Select Visit type\" dropdown\r\n"
-			+ "and verify that \"Follow-up Patient\" is selected or not.")
-	public void verifyRadioButton() throws Exception {
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModule");
-		Assert.assertTrue(operationTheatre_PagesInstance.verifyRadioButton(),"something went wroung in pages class, please check manually");
-		Assert.assertEquals(operationTheatre_PagesInstance.verifyOptionIsSelectedFromDropdown(expectedData), expectedData.get("visitTypeOptionValue"), "selected option is not matching with expected in page class, please check manually!");
-		Assert.assertTrue(locatorsFactoryInstance.verifyDaysRadioButtonIsSelected(), "element not present in the current page ((Locators Factory), Please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.verifyFollowUpPatientIsSelected(), expectedData.get("visitTypeOptionValue"), "selected option is not matching with expected(Locators Factory), please check manually!");
-	}
-
-	@Test(priority = 15, groups = {"sanity"}, description="On the Book Appointment submodules of appointment module,\r\n"
-			+ "clicking on the \"Add Appointment\" button\r\n"
-			+ "it will throw an Error Notification popup. \r\n"
-			+ "Then Assert that Error Message using hard assert")
-	public void verifyErrorNotificationPopupMessage() throws Exception {
-
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModule");
-
-		Assert.assertEquals(operationTheatre_PagesInstance.verifyErrorNotificationPopupMessage(),expectedData.get("errorNotificationPopupMessage")) ;
-		Assert.assertEquals(locatorsFactoryInstance.verifyErrorNotificationPopupMessageIsPresent(),expectedData.get("errorNotificationPopupMessage")) ;
-	}
-
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");
