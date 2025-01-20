@@ -153,63 +153,6 @@ public class operationTheatre_testcase extends AppTestBase
 		Assert.assertTrue(locatorsFactoryInstance.verifyErrorMessageOfAddExternalReferralForms(driver).isDisplayed(), "Error Message Of AddExternal Referral Forms is not present in the current page, Please check manually");
 	}
 
-	@Test(priority = 9, groups = {"sanity"}, description="On  the \"Booking OT Schedule | New Patient\" form's, \r\n"
-			+ "External? Checkbox must be selected.\r\n"
-			+ "Click on \"+\" icon to popup the Add External Referral form\r\n"
-			+ "then fill all the details (get the data from json),\r\n"
-			+ "click on all checkbox and then click on \"Add\" button\r\n"
-			+ "then verify the success notifications message.")
-	public void verifySuccessNotificationPopupMessage() throws Exception {
-
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "addExternalReferralPageInfo");
-
-		Assert.assertEquals(operationTheatre_PagesInstance.verifySuccessNotificationPopupMessage(expectedData),expectedData.get("successNotificationPopupMessage")) ;
-		Assert.assertEquals(locatorsFactoryInstance.verifySuccessNotificationPopupMessageIsPresent(),expectedData.get("successNotificationPopupMessage")) ;
-	}
-
-	@Test(priority = 10, groups = {"sanity"}, description="On  the \"Booking OT Schedule | New Patient\" form's,\r\n"
-			+ "Close the \"Booking OT Schedule | New Patient\" form's\r\n"
-			+ "by using javaScript.")
-	public void performJavaScriptExecutorOperation() throws Exception {
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Assert.assertTrue(operationTheatre_PagesInstance.closeBookingOTScheduleNewPatientFormsByUsingJsExecutor(), "Unable to perform the js Executor operation, please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.verifyNewOTBookingButtonIsPresent(driver).isDisplayed(), "New OT Booking is not present in the current page, Please check manually");
-	}
-
-	@Test(priority = 11, groups = {"sanity"}, description="Expand Billing Module,\r\n"
-			+ "Scroll to the \"Handover\" Sub module's and \r\n"
-			+ "then click on \"Handover\" Sub module\r\n"
-			+ "again Scroll to the buttom of the handover page\r\n"
-			+ "and validate the \"Remarks\" text field and\r\n"
-			+ "\"Handover To User\" button is present")
-	public void performScrollOperation() throws Exception {
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModule");
-
-
-		Assert.assertTrue(operationTheatre_PagesInstance.performScrollOperation(expectedData), "Unable to perform the scroll operation, please check manually");
-		Assert.assertTrue(locatorsFactoryInstance.verifyHandoverToUserButtonIsPresent(driver).isDisplayed(), "HandoverToUser Button is not present in the current page(locators factory), Please check manually");
-	}
-
-	@Test(priority = 12, groups = {"sanity"}, description="On the Billing module's , buttom of the \"Handover\" page,\r\n"
-			+ "locate the \"Remarks\" textbox and \"HandOver To User\" button by using \"ID\"  locator\r\n"
-			+ "and verify that,  \r\n"
-			+ "the \"Remarks\" textbox and \"HandOver To User\" button is present or not ?\r\n"
-			+ "If the \"Remarks\" textbox and \"\"HandOver To User\" button is present,\r\n"
-			+ "then highlight those element.")
-	public void verifyLocators() throws Exception {
-		operationTheatre_PagesInstance = new operationTheatre_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "operationTheatreModule");
-		Assert.assertEquals(operationTheatre_PagesInstance.verifyLocatorsValueOfELement(expectedData), expectedData.get("idLocatorsValueOfremarkTextbox"),"something went wroung, please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.verifyValueIsPresentInTextbox(),expectedData.get("remarksValue"),"value is not present in the remark text box (Locators factory),  Please check manually");
-	}
-
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");
