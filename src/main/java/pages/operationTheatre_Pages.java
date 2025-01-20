@@ -218,52 +218,6 @@ public class operationTheatre_Pages extends StartupPage {
 		return null;
 	}
 
-	/**@Test9
-	 * about this method verifySuccessNotificationPopupMessage() 
-	 * @param : null
-	 * @description : it will navigate to the URL and validate the URL of the current page.
-	 * @return : String
-	 * @author : YAKSHA
-	 */
-	public String verifySuccessNotificationPopupMessage(Map<String, String> expectedData) throws Exception {
 
-		return null;
-	}
-
-	/**@Test10
-	 * about this method closeBookingOTScheduleNewPatientFormsByUsingJsExecutor() 
-	 * @param : null
-	 * @description : On the "Booking OT Schedule New Patient" Forms, Close this ""Booking OT Schedule New Patient" Forms by using javaScript.
-	 * @return : Boolean
-	 * @author : YAKSHA
-	 */
-	public Boolean closeBookingOTScheduleNewPatientFormsByUsingJsExecutor() throws Exception {
-		
-		return false;
-	}
-
-	/**@Test11
-	 * about this method performScrollOperation() 
-	 * @param : null
-	 * @description : scroll to the bottom of the page and validate the button and text field is present
-	 * @return : Boolean
-	 * @author : YAKSHA
-	 */
-	public Boolean performScrollOperation(Map<String, String> expectedData) throws Exception {
-
-		return false;
-	}
-
-	/**@Test12
-	 * about this method verifyLocatorsValueOfELement() 
-	 * @param : Map<String, String>
-	 * @description : verify locators value of text box and send value to the text box and highlight that text box
-	 * @return : String
-	 * @author : YAKSHA
-	 */
-	public String verifyLocatorsValueOfELement(Map<String, String> expectedData) throws Exception {
-
-		return null;
-	}
 
 }
