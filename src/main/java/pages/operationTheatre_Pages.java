@@ -97,7 +97,7 @@ public class operationTheatre_Pages extends StartupPage {
 		super(driver);
 	}
 
-	/**@Test1
+	/**@Test1.1
 	 * about this method loginTohealthAppByGivenValidCredetial() 
 	 * @param : Map<String, String>
 	 * @description : fill usernameTextbox & passwordTextbox and click on sign in button
@@ -157,7 +157,7 @@ public class operationTheatre_Pages extends StartupPage {
 		return null;
 	}
 
-	/**@Test6
+	/**@Test4
 	 * about this method verifyTexboxIsPresentAndValidateEnteredValue() 
 	 * @param : null
 	 * @description : verify text box , then send value to that text box and validate the entered value
