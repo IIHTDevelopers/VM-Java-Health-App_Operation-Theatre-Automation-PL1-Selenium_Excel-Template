@@ -7,90 +7,33 @@ import org.openqa.selenium.WebDriver;
 
 public class operationTheatre_Pages extends StartupPage {
 	
-	By usernameTextfield = By.id(" ");
-	By usernameTextbox = By.xpath(" ");
-	By passwordTextbox = By.xpath(" ");
-	By signInButton = By.xpath(" ");
-	By registeredPatientTextElement = By.xpath(" ");	
-	By operationTheatreModule = By.xpath(" ");
-	By operationTheatreTab = By.xpath(" ");
-
-	By newOTButtonElement = By.xpath(" ");
-	By newOTButtonLink = By.xpath(" ");
-	By searchTextBoxElement = By.xpath(" ");
-	By bookingOTSchedulePageElement = By.xpath(" ");
-
-	By selectpatientTextboxElement = By.xpath(" ");
-	By diagnosisTextboxElement = By.xpath(" ");
-	By surgeryTypeTextboxElement = By.xpath(" ");
-	By remarkTextboxElement = By.xpath(" ");
-
-
-	By surgenNameTextFieldElement = By.xpath(" ");
-	By anesthetistDoctorTextboxElement = By.xpath(" ");
-	By surgenNameFirstButtonElement = By.xpath(" ");
-
-	By externalCheckBoxElement = By.xpath(" ");
-	By plusIconButtonElement = By.xpath(" ");
-
-	By referrerNameTextFieldElement = By.xpath(" ");
-	By extRefferAddressTextFieldElement = By.xpath(" ");
-	By contactNumberTextFieldElement = By.xpath(" ");
-	By emailTextFieldElement = By.xpath(" ");
-	By isIncentiveApplicableCheckboxElement = By.xpath(" ");
-	By addButtonElement = By.xpath(" ");
-	By successNotificationPopupMessageElement = By.xpath(" ");
-
-	By successNotificationPopupMessageOneElement = By.xpath(" ");
-	By successNotificationPopupMessageTwoElement = By.xpath(" ");
-
-	By hospitalNumberByElement = By.xpath(" ");
-	By newOtButtonByElement = By.xpath(" ");
-	By bookingOTScheduleFormsTitleNameByElement = By.xpath(" ");
-	By remarksTextAreaByElement = By.xpath(" ");
-	By addButtonOfAddExternalReferralByElement = By.xpath(" ");
-	By errorMessageOfAddExternalReferralFormsByElement = By.xpath(" ");
-	By titleOfaddExternalReferralFormsByElement = By.xpath(" ");
-	By closeLinkOfBookingOTScheduleNewPatientFormsByElement = By.xpath(" ");
-
-	By billingModuleExpandIconByElement = By.xpath(" ");
-	By newOneCounterLinkByElement = By.xpath(" ");
-
-	By handOverSubModuleLinkByElement = By.xpath(" ");
-	By remarksTextFieldOfBillingSubModulesByElement = By.xpath(" ");
-	By handOverToUserButtonOfBillingSubModuleByElement = By.xpath(" ");
-
-	By vaccinationModuleByElement = By.xpath(" ");
-	By vaccinationModulesToggleIconByElement = By.xpath(" ");
-	By patientListSubModuleByElement = By.xpath(" ");
-	By titleNameOfVaccinationPatientRegisterFormByElement = By.xpath(" ");
-
-	By appointmentModuleByElement = By.xpath(" ");
-	By appointmentModulesToggleIconByElement = By.xpath(" ");
-	By bookingAppointmentSubModuleByElement = By.xpath(" ");
-
-	By newPatientButtonByElement = By.xpath(" ");
-
-	By monthRadioButtonByElement = By.xpath(" ");
-	By daysRadioButtonByElement = By.xpath(" ");
-
-	By selectVisitTypeDropdownByElement = By.xpath(" ");
-
-	By addAppointmentButtonByElement = By.xpath(" ");
-
-	By errorNotificationPopupMessageElement = By.xpath(" ");
-	By statusErrorNotificationMessageByElement = By.xpath(" ");
-	By mainErrorNotificationMessageByElement = By.xpath(" ");
-	By closeLinkOfVaccinationPatientRegisterForm = By.xpath(" ");
-	By newOTBookingButtonByElement = By.xpath(" ");
-
-	By selectOTAssistantNameFieldByElement = By.xpath(" ");
-	By searchTexboxOfSelectOTAssistantNameFieldByElement = By.xpath(" ");
-	By drPoojaMishraCheckBoxByElement = By.xpath(" ");
-	By selectOTAssistantNameDropdownByElement = By.xpath(" ");
-
-	By closeLinkByElement = By.xpath(" ");
-
+	//	Locators for TC-1 
+	By usernameTextbox = null;
+	By passwordTextbox = null;
+	By signInButton = null;
+	By registeredPatientTextElement = null;
+//	Locators for TC-2
+	By operationTheatreModule = null;
+	By hospitalNumberByElement = null;
+//	Locators for TC-3
+	By newOtButtonByElement = null;
+	By bookingOTScheduleFormsTitleNameByElement = null;
+//	Locators for TC-4
+	By selectpatientTextboxElement = null;
+	By diagnosisTextboxElement = null;
+	By surgeryTypeTextboxElement = null;
+//	Locators for TC-5
+	By remarksTextAreaByElement = null;
+//	Locators for TC-6
+	By remarkTextboxElement = null;
+	By surgenNameTextFieldElement = null;
+	By surgenNameFirstButtonElement = null;
+//	Locators for TC-7
+	By externalCheckBoxElement = null;
+//	Locators for TC-8	
+	By plusIconButtonElement = null;
+	By addButtonOfAddExternalReferralByElement = null;
+	By errorMessageOfAddExternalReferralFormsByElement = null;
 
 	String pageName = this.getClass().getSimpleName();
 	public operationTheatre_Pages(WebDriver driver) {
